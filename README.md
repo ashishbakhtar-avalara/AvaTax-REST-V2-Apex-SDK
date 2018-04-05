@@ -28,6 +28,7 @@ The Apex SDK uses a fluent interface to define a connection to AvaTax and to mak
 ```csharp
 public class Program
 {
+
     //Sample Method to Test The AvaTax Credential
     public void testConnection()
     {
