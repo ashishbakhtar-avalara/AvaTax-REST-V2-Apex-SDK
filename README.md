@@ -28,7 +28,8 @@ The Apex SDK uses a fluent interface to define a connection to AvaTax and to mak
 ```csharp
 public class Program
 {
-    public void Main()
+    //Sample Method to Test The AvaTax Credential
+    public void testConnection()
     {
         // Create a client and set up authentication
         AVA_SFREST.AvaTaxClient Client = new AVA_SFREST.AvaTaxClient('MyTestApp', '1.0', AVA_SFREST.Environment.MachineName, AVA_SFREST.AvaTaxEnvironment.Sandbox)
@@ -41,6 +42,30 @@ public class Program
         if (result.statusCode == 200 || result.statusCode == 201)
         {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.SUCCESS, 'Connected to AvaTax'));
+        }
+    }
+    
+    
+    //Sample Method to Calculate The Tax 
+    public void calculateTax()
+    {
+        // Create a client and set up authentication
+        AVA_SFREST.AvaTaxClient Client = new AVA_SFREST.AvaTaxClient('MyTestApp', '1.0', AVA_SFREST.Environment.MachineName, AVA_SFREST.AvaTaxEnvironment.Sandbox)
+            .WithSecurity('MyUsername', 'MyPassword');
+
+        //Create an Instance of CreateTransactionModel
+        AVA_SFREST.CreateTransactionModel getTaxRequest = new AVA_SFREST.CreateTransactionModel();
+        
+        //Fetch the GetTaxRequest
+        getTaxRequest = createTaxRequest(); // custom method to Create Tax Request
+       
+        //Create a Simple Transaction
+        AVA_SFREST.TransactionModel getTaxResponse = Client.CreateTransaction('Addresses',getTaxRequest);
+      
+        // Verify transaction creation 
+        if (result.statusCode == 200 || result.statusCode == 201)
+        {
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.SUCCESS, 'Transaction Created in AvaTax'));
         }
     }
 }
