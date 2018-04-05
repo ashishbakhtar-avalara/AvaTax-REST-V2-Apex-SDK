@@ -1,15 +1,12 @@
-AvaTax-REST-V2-Apex-SDK
+# AvaTax-REST-V2-Apex-SDK
 
 This GitHub repository is the Salesforce (or Apex) SDK for Avalara's world-class tax service, AvaTax. It uses the AvaTax REST v2 API, which is a fully REST implementation and provides a single client for all AvaTax functionality. For more information about AvaTax REST v2, please visit Avalara's Developer Network or view the online Swagger documentation.
 
-Build Status
+# Build Status
 
-Production : https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I000003FBr1
+Beta Package is available
 
-SandBox : https://test.salesforce.com/packaging/installPackage.apexp?p0=04t1I000003FBr1
-
-
-Installing the Apex SDK
+# Installing the Apex SDK
 
 To Install AvaTax APEX REST v2 SDK 
 
@@ -24,7 +21,7 @@ SandBox : https://test.salesforce.com/packaging/installPackage.apexp?p0=04t1I000
 • Install the Package by selecting appropriate User option. 
 
 
-Using the Apex SDK
+# Using the Apex SDK
 
 The Apex SDK uses a fluent interface to define a connection to AvaTax and to make API calls to calculate tax on transactions. Here's an example of how to connect to AvaTax in Apex:
 
