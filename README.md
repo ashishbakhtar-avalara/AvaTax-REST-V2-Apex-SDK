@@ -60,7 +60,7 @@ public class Program
         getTaxRequest = createTaxRequest(); // custom method to Create Tax Request
        
         //Create a Simple Transaction
-        AVA_SFREST.TransactionModel getTaxResponse = Client.CreateTransaction('Addresses',getTaxRequest);
+        AVA_SFREST.TransactionModel result = Client.CreateTransaction('Addresses',getTaxRequest);
       
         // Verify transaction creation 
         if (result.statusCode == 200 || result.statusCode == 201)
