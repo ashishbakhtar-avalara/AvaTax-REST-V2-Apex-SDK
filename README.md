@@ -26,7 +26,7 @@ SandBox : https://test.salesforce.com/packaging/installPackage.apexp?p0=04t1I000
 The Apex SDK uses a fluent interface to define a connection to AvaTax and to make API calls to calculate tax on transactions. Here's an example of how to connect to AvaTax in Apex:
 
 ```csharp
- public class Program
+public class Program
 {
     public void Main()
     {
