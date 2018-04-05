@@ -26,22 +26,19 @@ SandBox : https://test.salesforce.com/packaging/installPackage.apexp?p0=04t1I000
 The Apex SDK uses a fluent interface to define a connection to AvaTax and to make API calls to calculate tax on transactions. Here's an example of how to connect to AvaTax in Apex:
 
 ```csharp
-    public class Program
-    {
-    public void Main()
-    {
-        // Create a client and set up authentication
-        AVA_SFREST.AvaTaxClient Client = new AVA_SFREST.AvaTaxClient("MyTestApp", "1.0", Environment.MachineName,   AvaTaxEnvironment.Sandbox)
-            .WithSecurity("MyUsername", "MyPassword");
-    
-        // Verify that we can ping successfully
-       AVA_SFREST.PingResultModel pingResult = Client.Ping();
-       
-        // Verify that we can ping successfully
-        if(result.statusCode == 200 || result.statusCode == 201)
-        {
-        ApexPages.addmessage(new ApexPages.message(ApexPages.severity.SUCCESS,'Connected to AvaTax'));
-        }
-     }
-    }
+    public class Program {
+      public void Main() {
+          // Create a client and set up authentication
+          AVA_SFREST.AvaTaxClient Client = new AVA_SFREST.AvaTaxClient("MyTestApp", "1.0", Environment.MachineName, AvaTaxEnvironment.Sandbox)
+              .WithSecurity("MyUsername", "MyPassword");
+
+          // Verify that we can ping successfully
+          AVA_SFREST.PingResultModel pingResult = Client.Ping();
+
+          // Verify that we can ping successfully
+          if (result.statusCode == 200 || result.statusCode == 201) {
+              ApexPages.addmessage(new ApexPages.message(ApexPages.severity.SUCCESS, 'Connected to AvaTax'));
+          }
+      }
+  }
 ```
