@@ -32,7 +32,7 @@ public class Program
     {
         // Create a client and set up authentication
         AVA_SFREST.AvaTaxClient Client = new AVA_SFREST.AvaTaxClient('MyTestApp', '1.0', AVA_SFREST.Environment.MachineName, AVA_SFREST.AvaTaxEnvironment.Sandbox)
-            .WithSecurity("MyUsername", "MyPassword");
+            .WithSecurity('MyUsername', 'MyPassword');
 
         // Verify that we can ping successfully
         AVA_SFREST.PingResultModel pingResult = Client.Ping();
