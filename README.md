@@ -21,7 +21,7 @@ SandBox : https://test.salesforce.com/packaging/installPackage.apexp?p0=04t1I000
 
 • Paste the URL in web browser and Login into your Salesforce Org that must have this package to install SDK for that environment.
 
-• Install the Package for by selecting appropriate User option. for target audience.
+• Install the Package by selecting appropriate User option. 
 
 
 Using the Apex SDK
