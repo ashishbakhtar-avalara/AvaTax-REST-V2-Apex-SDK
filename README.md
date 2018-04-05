@@ -46,7 +46,7 @@ public class Program
     }
     
     
-    //Sample Method to Calculate The Tax 
+    //Sample Method to Calculate The Tax
     public void calculateTax()
     {
         // Create a client and set up authentication
