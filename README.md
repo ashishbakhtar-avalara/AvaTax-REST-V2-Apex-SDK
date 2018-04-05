@@ -68,5 +68,49 @@ public class Program
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.SUCCESS, 'Transaction Created in AvaTax'));
         }
     }
+    
+    //Create Tax Request 
+    public AVA_SFREST.CreateTransactionModel createTaxRequest()
+    {
+        //Create Instance of CreateTransactionModel
+        AVA_SFREST.CreateTransactionModel getTaxRequest = new AVA_SFREST.CreateTransactionModel();
+        
+        //Create Instance of AddressModel
+        AddressesModel addresses = new AddressesModel();
+		
+        //Create Instance of AddressLocationInfo
+        AddressLocationInfo singleLocation = new AddressLocationInfo();
+        singleLocation.line1 ='900 winslow way e';
+        singleLocation.city ='BI';
+        singleLocation.postalCode ='98100';
+        singleLocation.region  ='WA';
+        singleLocation.country ='US';
+            
+        //Create Instance of LineItemModel
+        LineItemModel line = new LineItemModel();
+        line.lineNumber ='1';    
+        line.quantity = '1';
+        line.amount = 100;
+        
+        //Create LineItemModel List
+        List<LineItemModel> lineList = new List<LineItemModel>();
+        lineList.add(line);   
+        
+        //Map Instance of AddressLocationInfo to AddressModel
+        addresses.singleLocation = singleLocation;
+        
+       //Map Instance of Addresses to getTaxRequest
+        getTaxRequest.addresses =addresses;
+
+       //Map Instance of lineList to getTaxRequest
+        getTaxRequest.lines =lineList;
+        
+        getTaxRequest.type ='SalesInvoice';
+        getTaxRequest.documentDate =system.today();
+		getTaxRequest.customerCode ='abc';
+        getTaxRequest.companyCode ='Default';
+        
+        return getTaxRequest;
+    }
 }
 ```
