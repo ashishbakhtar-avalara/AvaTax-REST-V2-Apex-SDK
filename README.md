@@ -99,17 +99,25 @@ public class Program
         //Map Instance of AddressLocationInfo to AddressModel
         addresses.singleLocation = singleLocation;
         
-       //Map Instance of Addresses to getTaxRequest
+        //Map Instance of Addresses to getTaxRequest
         getTaxRequest.addresses =addresses;
 
-       //Map Instance of lineList to getTaxRequest
+        //Map Instance of lineList to getTaxRequest
         getTaxRequest.lines =lineList;
         
+	//Map the Type of Document
         getTaxRequest.type ='SalesInvoice';
-        getTaxRequest.documentDate =system.today();
-		getTaxRequest.customerCode ='abc';
-        getTaxRequest.companyCode ='Default';
         
+	//Map the Document date
+	getTaxRequest.documentDate =system.today();
+	
+	//Map the Customer Code
+	getTaxRequest.customerCode ='abc';
+        
+	//Map the CompanyCode
+	getTaxRequest.companyCode ='Default';
+        
+	//return instance of getTaxRequest
         return getTaxRequest;
     }
 }
