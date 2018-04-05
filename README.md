@@ -93,7 +93,7 @@ public class Program
         line.amount = 100;
         
         //Create LineItemModel List
-        List<LineItemModel> lineList = new List<LineItemModel>();
+        List<AVA_SFREST.LineItemModel> lineList = new List<AVA_SFREST.LineItemModel>();
         lineList.add(line);   
         
         //Map Instance of AddressLocationInfo to AddressModel
