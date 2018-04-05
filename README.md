@@ -76,10 +76,10 @@ public class Program
         AVA_SFREST.CreateTransactionModel getTaxRequest = new AVA_SFREST.CreateTransactionModel();
         
         //Create Instance of AddressModel
-        AddressesModel addresses = new AddressesModel();
+        AVA_SFREST.AddressesModel addresses = new AVA_SFREST.AddressesModel();
 		
         //Create Instance of AddressLocationInfo
-        AddressLocationInfo singleLocation = new AddressLocationInfo();
+        AVA_SFREST.AddressLocationInfo singleLocation = new AVA_SFREST.AddressLocationInfo();
         singleLocation.line1 ='900 winslow way e';
         singleLocation.city ='BI';
         singleLocation.postalCode ='98100';
@@ -87,7 +87,7 @@ public class Program
         singleLocation.country ='US';
             
         //Create Instance of LineItemModel
-        LineItemModel line = new LineItemModel();
+        AVA_SFREST.LineItemModel line = new AVA_SFREST.LineItemModel();
         line.lineNumber ='1';    
         line.quantity = '1';
         line.amount = 100;
